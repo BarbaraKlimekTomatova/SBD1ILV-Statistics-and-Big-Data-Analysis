@@ -9,9 +9,6 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Dáta (každý si ich stiahne sám podľa README)
-data_raw/
-data_processed/
 
 # Editor a tajomstvá
 .vscode/

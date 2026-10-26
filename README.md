@@ -58,15 +58,15 @@ Steps:
 
 ## Download
 
-Automatic: run the notebooks `1_ECDC_ERVISS.ipynb`, `2_WHO_FluNet.ipynb` and `3_Eurostat_umrtia.ipynb`. They download the data into the `data_raw/` folder.
+Automatic: run the notebooks `1_ECDC_ERVISS.ipynb`, `2_WHO_FluNet.ipynb` and `3_Eurostat_umrtia.ipynb`. They download the data into the `raw_data/` folder.
 
-Manual: save the downloaded files into the **`data_raw/`** folder and write the download date into `data_raw/DOWNLOADED.txt`.
+Manual: save the downloaded files into the **`raw_data/`** folder and write the download date into `raw_data/DOWNLOADED.txt`.
 
 ### 1. ECDC ERVISS
 
 1. Open <https://github.com/EU-ECDC/Respiratory_viruses_weekly_data>.
 2. Click the green **Code → Download ZIP** button and unzip the archive.
-3. Copy the 9 `*.csv` files from the `data/` folder into `data_raw/`. The `data/snapshots/` folder holds older versions and is not needed.
+3. Copy the 9 `*.csv` files from the `data/` folder into `raw_data/`. The `data/snapshots/` folder holds older versions and is not needed.
 
 Alternatively from the terminal: `git clone --depth 1 https://github.com/EU-ECDC/Respiratory_viruses_weekly_data.git`
 
@@ -75,7 +75,7 @@ Alternatively from the terminal: `git clone --depth 1 https://github.com/EU-ECDC
 1. Open <https://www.who.int/tools/flunet>.
 2. In the **Download the full dataset** section click **FluNet dataset (CSV)**. The file is large, so the download takes a while.
 3. On the same page also download the **Data dictionary (CSV)**, which explains the columns.
-4. Save both files into `data_raw/`.
+4. Save both files into `raw_data/`.
 
 If you only need a subset (e.g. SK or the EU), use the **View/download filtered data** link. It opens Power BI, where you can set filters and export the data.
 
@@ -84,4 +84,4 @@ If you only need a subset (e.g. SK or the EU), use the **View/download filtered 
 1. Open <https://ec.europa.eu/eurostat/databrowser/view/demo_r_mwk_20/default/table>.
 2. Under **Customise your dataset** select the countries (at least SK and the EU countries you want to compare), all age groups, sex *Total, Males, Females* and the period from 2015.
 3. Click **Download**, choose **CSV** and *Full dataset* (or *Data as displayed* if you filtered).
-4. Save the file into `data_raw/`.
+4. Save the file into `raw_data/`.
