@@ -1,0 +1,76 @@
+column,dtype,source,description,non_missing
+country_code,str,key,ISO 3166-1 alpha-2 country code (Greece = GR),18456
+country_name,str,key,Country name (English),18456
+eu_member,bool,key,"True for EU27, False for Iceland, Liechtenstein, Norway",18456
+year_week,str,key,"ISO 8601 week, e.g. 2024-W05 (join key)",18456
+week_start,datetime64[us],key,Monday of the ISO week,18456
+iso_year,int64,key,ISO year,18456
+iso_week,int64,key,ISO week number (1–53),18456
+season,str,key,"Influenza season, ISO week 40 to week 39 of the next year, e.g. 2024/25",18456
+season_week,int64,key,Week of the influenza season (week 40 = 1),18456
+has_ecdc,bool,key,Row has at least one ECDC value,18456
+has_who,bool,key,Row has at least one WHO FluNet value,18456
+has_eurostat,bool,key,Row has Eurostat deaths,18456
+ili_rate,float64,ECDC ERVISS,"ECDC – influenza-like illness consultations per 100,000 population (CY, LU, MT: per 100 consultations; FI: per 100,000 consultations)",4646
+ili_rate_age_0_4,float64,ECDC ERVISS,"ECDC – influenza-like illness consultations per 100,000 population (CY, LU, MT: per 100 consultations; FI: per 100,000 consultations), age 0–4",3990
+ili_rate_age_15_64,float64,ECDC ERVISS,"ECDC – influenza-like illness consultations per 100,000 population (CY, LU, MT: per 100 consultations; FI: per 100,000 consultations), age 15–64",3992
+ili_rate_age_5_14,float64,ECDC ERVISS,"ECDC – influenza-like illness consultations per 100,000 population (CY, LU, MT: per 100 consultations; FI: per 100,000 consultations), age 5–14",3990
+ili_rate_age_65plus,float64,ECDC ERVISS,"ECDC – influenza-like illness consultations per 100,000 population (CY, LU, MT: per 100 consultations; FI: per 100,000 consultations), age 65+",3992
+sari_rate,float64,ECDC ERVISS,"ECDC – severe acute respiratory infection hospital admissions per 100,000 population",2654
+sari_rate_age_0_4,float64,ECDC ERVISS,"ECDC – severe acute respiratory infection hospital admissions per 100,000 population, age 0–4",1981
+sari_rate_age_15_64,float64,ECDC ERVISS,"ECDC – severe acute respiratory infection hospital admissions per 100,000 population, age 15–64",2265
+sari_rate_age_5_14,float64,ECDC ERVISS,"ECDC – severe acute respiratory infection hospital admissions per 100,000 population, age 5–14",1837
+sari_rate_age_65plus,float64,ECDC ERVISS,"ECDC – severe acute respiratory infection hospital admissions per 100,000 population, age 65+",2337
+flu_deaths,float64,ECDC ERVISS,"ECDC non-sentinel severity – influenza, deaths",1191
+flu_hosp_admissions,float64,ECDC ERVISS,"ECDC non-sentinel severity – influenza, hospital admissions",1264
+flu_icu_admissions,float64,ECDC ERVISS,"ECDC non-sentinel severity – influenza, ICU admissions",1038
+lab_flu_a_h1pdm09_detections,float64,ECDC ERVISS,"ECDC non-sentinel laboratory – influenza A(H1)pdm09, number of positive detections",3056
+lab_flu_a_h3_detections,float64,ECDC ERVISS,"ECDC non-sentinel laboratory – influenza A(H3), number of positive detections",2830
+lab_flu_a_unknown_detections,float64,ECDC ERVISS,"ECDC non-sentinel laboratory – influenza A (subtype unknown), number of positive detections",3672
+lab_flu_b_unknown_detections,float64,ECDC ERVISS,"ECDC non-sentinel laboratory – influenza B (lineage unknown), number of positive detections",3006
+lab_flu_b_vic_detections,float64,ECDC ERVISS,"ECDC non-sentinel laboratory – influenza B/Victoria, number of positive detections",931
+lab_flu_detections,float64,ECDC ERVISS,"ECDC non-sentinel laboratory – influenza, number of positive detections",5720
+lab_flu_tests,float64,ECDC ERVISS,"ECDC non-sentinel laboratory – influenza, number of specimens tested",4847
+lab_flu_untyped_detections,float64,ECDC ERVISS,"ECDC non-sentinel laboratory – influenza untyped, number of positive detections",429
+sari_flu_a_h1pdm09_detections,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza A(H1)pdm09, number of positive detections",622
+sari_flu_a_h3_detections,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza A(H3), number of positive detections",543
+sari_flu_a_unknown_detections,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza A (subtype unknown), number of positive detections",759
+sari_flu_b_unknown_detections,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza B (lineage unknown), number of positive detections",339
+sari_flu_b_vic_detections,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza B/Victoria, number of positive detections",95
+sari_flu_detections,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza, number of positive detections",2206
+sari_flu_positivity,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza, positivity %",2131
+sari_flu_tests,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza, number of specimens tested",2206
+sari_flu_untyped_detections,float64,ECDC ERVISS,"ECDC sentinel SARI (hospital) specimens – influenza untyped, number of positive detections",510
+sent_flu_a_h1pdm09_detections,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza A(H1)pdm09, number of positive detections",1926
+sent_flu_a_h3_detections,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza A(H3), number of positive detections",1788
+sent_flu_a_unknown_detections,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza A (subtype unknown), number of positive detections",1059
+sent_flu_b_unknown_detections,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza B (lineage unknown), number of positive detections",885
+sent_flu_b_vic_detections,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza B/Victoria, number of positive detections",775
+sent_flu_b_yam_detections,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza B/Yamagata, number of positive detections",1
+sent_flu_detections,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza, number of positive detections",4532
+sent_flu_positivity,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza, positivity %",4093
+sent_flu_tests,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza, number of specimens tested",5127
+sent_flu_untyped_detections,float64,ECDC ERVISS,"ECDC sentinel primary care specimens – influenza untyped, number of positive detections",187
+who_flu_tests,float64,WHO FluNet,"WHO FluNet, all sources summed – influenza, number of specimens tested",14865
+who_flu_detections,float64,WHO FluNet,"WHO FluNet, all sources summed – influenza, number of positive detections",10854
+who_flu_a_detections,float64,WHO FluNet,"WHO FluNet, all sources summed – influenza A, number of positive detections",15529
+who_flu_b_detections,float64,WHO FluNet,"WHO FluNet, all sources summed – influenza B, number of positive detections",14977
+who_flu_a_h1pdm09_detections,float64,WHO FluNet,"WHO FluNet, all sources summed – influenza A(H1)pdm09, number of positive detections",13300
+who_flu_a_h3_detections,float64,WHO FluNet,"WHO FluNet, all sources summed – influenza A(H3), number of positive detections",13222
+who_flu_b_vic_detections,float64,WHO FluNet,"WHO FluNet, all sources summed – influenza B/Victoria, number of positive detections",11641
+who_flu_b_yam_detections,float64,WHO FluNet,"WHO FluNet, all sources summed – influenza B/Yamagata, number of positive detections",11070
+who_sent_flu_tests,float64,WHO FluNet,"WHO FluNet, preferred (sentinel) source – influenza, number of specimens tested",14263
+who_sent_flu_detections,float64,WHO FluNet,"WHO FluNet, preferred (sentinel) source – influenza, number of positive detections",6017
+who_sent_flu_a_detections,float64,WHO FluNet,"WHO FluNet, preferred (sentinel) source – influenza A, number of positive detections",12480
+who_sent_flu_b_detections,float64,WHO FluNet,"WHO FluNet, preferred (sentinel) source – influenza B, number of positive detections",12043
+who_sent_flu_positivity,float64,WHO FluNet,"WHO FluNet preferred (sentinel) source – influenza detections / specimens tested, %; missing if fewer than MIN_TESTS (10) specimens",5276
+deaths_total,float64,Eurostat demo_r_mwk_20,"Eurostat – all-cause deaths, total",18025
+deaths_age_0_19,float64,Eurostat demo_r_mwk_20,"Eurostat – all-cause deaths, age 0–19",17239
+deaths_age_20_39,float64,Eurostat demo_r_mwk_20,"Eurostat – all-cause deaths, age 20–39",17241
+deaths_age_40_59,float64,Eurostat demo_r_mwk_20,"Eurostat – all-cause deaths, age 40–59",17372
+deaths_age_60_79,float64,Eurostat demo_r_mwk_20,"Eurostat – all-cause deaths, age 60–79",17372
+deaths_age_80plus,float64,Eurostat demo_r_mwk_20,"Eurostat – all-cause deaths, age 80+",17372
+deaths_provisional,boolean,Eurostat demo_r_mwk_20,Eurostat – total deaths value is provisional (flag p),18025
+expected_deaths,float64,Eurostat demo_r_mwk_20,"Mean all-cause deaths in the same ISO week, 2015–2019 (week 53 uses week 52)",18025
+excess_deaths,float64,Eurostat demo_r_mwk_20,deaths_total − expected_deaths,18025
+excess_deaths_pct,float64,Eurostat demo_r_mwk_20,excess_deaths / expected_deaths × 100,18025
